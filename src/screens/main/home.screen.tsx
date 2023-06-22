@@ -25,6 +25,7 @@ const Home: React.FC<Props> = ({navigation}) => {
   const countryScrollX = useRef(new Animated.Value(0)).current;
   const placesScrollX = useRef(new Animated.Value(0)).current;
   const [placesIndex, setPlacesIndex] = useState(0);
+  const [continent, setContinent] = useState('Africa');
 
   const countries = [{id: -1}, ...dummyData.countries, {id: -2}] as any;
 
@@ -49,7 +50,7 @@ const Home: React.FC<Props> = ({navigation}) => {
 
         {/***Label Title */}
         <View style={styles.titleWrapper}>
-          <Text style={styles.titleText}>ASIA</Text>
+          <Text style={styles.titleText}>{continent}</Text>
         </View>
 
         {/***Profile */}
@@ -92,6 +93,7 @@ const Home: React.FC<Props> = ({navigation}) => {
           const position = (
             event.nativeEvent.contentOffset.x / COUNTRIES_ITEM_SIZE
           ).toFixed(0) as any;
+          setContinent(dummyData.countries[position].continent);
 
           setPlace([
             {id: -1},

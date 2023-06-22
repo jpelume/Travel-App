@@ -50,6 +50,37 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: theme.SIZES.padding,
   },
+  mapContainer: {
+    flex: 1,
+    backgroundColor: 'transparent',
+  },
+  panelHeader: {
+    height: 120,
+    backgroundColor: 'transparent',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  upArrow: {
+    width: 20,
+    height: 20,
+    tintColor: theme.COLORS.white,
+  },
+  swipeText: {
+    color: theme.COLORS.white,
+    fontSize: theme.SIZES.h3,
+    fontWeight: '600',
+    lineHeight: 22,
+  },
+  panelDetailsContainer: {
+    flex: 1,
+    backgroundColor: theme.COLORS.white,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mapView: {
+    width: '100%',
+    height: '100%',
+  },
 });
 
 export default styles;
