@@ -37,7 +37,6 @@ const CustomButton: React.FC<Props> = ({
 }) => {
   const {width} = useWindowDimensions();
 
-  console.log('device width: ', width);
   return (
     <TouchableOpacity
       style={[

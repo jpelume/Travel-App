@@ -11,6 +11,9 @@ const theme = {
     FACEBOOK: '#395693',
     FACEBOOK_BG: '#d8dce7',
     GOOGLE: '#cf2c1f',
+    WARNING: '#db9a02',
+    ERROR: '#db0602',
+    SUCCESS: '#0b3812',
 
     white: '#fff',
     black: '#000000',

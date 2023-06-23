@@ -6,6 +6,7 @@ import {ButtonType, SocialButtonType} from './general/customButton.component';
 import {IconType, IconName} from './general/icons.component';
 import {InputType} from './general/customInput.component';
 import Header from './general/header.component';
+import Rating from './general/rating.component';
 export {
   CustomButton,
   Icon,
@@ -13,6 +14,7 @@ export {
   DropDown,
   SocialButton,
   Header,
+  Rating,
   ButtonType,
   IconType,
   IconName,

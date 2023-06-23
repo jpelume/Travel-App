@@ -28,9 +28,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   titleText: {
-    color: theme.COLORS.white,
-    fontSize: theme.SIZES.h3,
-    lineHeight: 22,
+    color: theme.COLORS.LIGTH_DARK,
+    fontSize: theme.SIZES.h1,
+    lineHeight: 30,
+    fontWeight: '500',
   },
   rightContainer: {
     width: 50,

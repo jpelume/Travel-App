@@ -14,7 +14,7 @@ const Header: React.FC<Props> = ({
   title = 'Header Title',
   leftOnPress,
   right,
-  containerStyle,
+  containerStyle = {},
 }) => {
   return (
     <View style={[styles.headerContainer, containerStyle]}>

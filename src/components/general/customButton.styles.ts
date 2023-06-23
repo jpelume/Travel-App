@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.COLORS.PRIMARY,
     alignItems: 'center',
     paddingVertical: 12,
-    // paddingHorizontal: 20,
+    paddingHorizontal: 20,
     borderRadius: 14,
   },
   disabled: {

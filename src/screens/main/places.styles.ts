@@ -81,6 +81,67 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  bedMarker: {
+    width: 50,
+    height: 50,
+  },
+  mapHeader: {
+    position: 'absolute',
+    top: theme.SIZES.padding * 2,
+  },
+  hotelDetailsContainer: {
+    position: 'absolute',
+    bottom: 30,
+    left: 0,
+    right: 0,
+    padding: theme.SIZES.radius,
+  },
+  hotelsIn: {
+    color: theme.COLORS.LIGTH_DARK,
+    fontSize: theme.SIZES.h1,
+    fontWeight: '600',
+    lineHeight: 33,
+  },
+  hotelDetailsCard: {
+    flexDirection: 'row',
+    marginTop: theme.SIZES.radius,
+    padding: theme.SIZES.radius,
+    borderRadius: 25,
+    backgroundColor: theme.COLORS.transparentBlack1,
+  },
+  hotelImage: {
+    width: 90,
+    height: 120,
+    borderRadius: 15,
+  },
+  hotelDetails: {
+    flex: 1,
+    marginLeft: theme.SIZES.radius,
+    justifyContent: 'center',
+  },
+  hotelName: {
+    color: theme.COLORS.white,
+    fontSize: theme.SIZES.h3,
+    fontWeight: '600',
+    lineHeight: 22,
+  },
+  ratingContainerStyle: {
+    marginTop: theme.SIZES.base,
+  },
+  bottomContainer: {
+    flexDirection: 'row',
+    marginTop: theme.SIZES.base,
+  },
+  priceContainer: {
+    flex: 1,
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+  },
+  priceText: {
+    color: theme.COLORS.lightGray,
+    fontSize: theme.SIZES.body5,
+    lineHeight: 22,
+  },
 });
 
 export default styles;

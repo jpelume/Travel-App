@@ -24,7 +24,7 @@ export const countries = [
             name: 'WDC Aparthotel',
             image: require('../assets/images/cameroon/buea/wdc_aparthotel.jpg'),
             rate: 5,
-            price: 105,
+            price: 63400,
             latlng: {
               latitude: 4.147237,
               longitude: 9.30289,
@@ -35,7 +35,7 @@ export const countries = [
             name: 'Mountain Hotel',
             image: require('../assets/images/cameroon/buea/mountain_hotel.jpg'),
             rate: 4,
-            price: 104,
+            price: 62800,
             latlng: {
               latitude: 4.1500457,
               longitude: 9.227086,
@@ -46,7 +46,7 @@ export const countries = [
             name: 'Hotel Saint Claire',
             image: require('../assets/images/cameroon/buea/hotel_saint_claire.jpg'),
             rate: 4,
-            price: 48,
+            price: 28900,
             latlng: {
               latitude: 4.1571322,
               longitude: 9.2866229,
@@ -73,7 +73,7 @@ export const countries = [
             name: 'Hotel Seme Beach',
             image: require('../assets/images/cameroon/limbe/hotel_seme_beach.jpg'),
             rate: 4,
-            price: 40,
+            price: 24200,
             latlng: {
               latitude: 4.061044,
               longitude: 9.0416843,
@@ -84,7 +84,7 @@ export const countries = [
             name: 'Dankasia Guest House',
             image: require('../assets/images/cameroon/limbe/dankasia_guest_house.jpg'),
             rate: 4,
-            price: 41,
+            price: 24800,
             latlng: {
               latitude: 4.0631478,
               longitude: 9.2202279,
@@ -95,7 +95,7 @@ export const countries = [
             name: 'Rose Garden Apartments',
             image: require('../assets/images/cameroon/limbe/rose_garden_apartments.jpg'),
             rate: 4,
-            price: 77,
+            price: 46500,
             latlng: {
               latitude: 4.0146981,
               longitude: 9.1512616,
@@ -122,7 +122,7 @@ export const countries = [
             name: 'Résidence Jully',
             image: require('../assets/images/cameroon/kribi/residence_jully.jpg'),
             rate: 4,
-            price: 90,
+            price: 54400,
             latlng: {
               latitude: 2.9418258,
               longitude: 9.9081888,
@@ -133,7 +133,7 @@ export const countries = [
             name: 'Hotel Elabe Marine',
             image: require('../assets/images/malaysia/penang/sunrise_gurney_homestay.jpg'),
             rate: 3,
-            price: 40,
+            price: 24200,
             latlng: {
               latitude: 2.9901554,
               longitude: 9.9261823,
@@ -144,7 +144,7 @@ export const countries = [
             name: 'Hotel Tara Plage',
             image: require('../assets/images/cameroon/kribi/hotel_tara_plage.jpg'),
             rate: 3,
-            price: 43,
+            price: 2600,
             latlng: {
               latitude: 2.935026,
               longitude: 9.9077953,
@@ -179,7 +179,7 @@ export const countries = [
             name: 'Riverside Majestic Hotel',
             image: require('../assets/images/malaysia/kuching/riverside_majestic_hotel.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.557907,
               longitude: 110.352079,
@@ -190,7 +190,7 @@ export const countries = [
             name: 'Grand Margherita Hotel',
             image: require('../assets/images/malaysia/kuching/grand_margherita_hotel.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.558163,
               longitude: 110.352813,
@@ -201,7 +201,7 @@ export const countries = [
             name: 'Hilton Kuching',
             image: require('../assets/images/malaysia/kuching/hilton_kuching.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.557144,
               longitude: 110.350496,
@@ -228,7 +228,7 @@ export const countries = [
             name: 'Hilton Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/hilton_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.135308,
               longitude: 101.685729,
@@ -239,7 +239,7 @@ export const countries = [
             name: 'Le Méridien Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/le_meridien_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.135843,
               longitude: 101.686544,
@@ -250,7 +250,7 @@ export const countries = [
             name: 'The St. Regis Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/the_st_regis_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.136902,
               longitude: 101.688924,
@@ -277,7 +277,7 @@ export const countries = [
             name: 'Sunrise Gurney',
             image: require('../assets/images/malaysia/penang/sunrise_gurney.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.432874,
               longitude: 100.31675,
@@ -288,7 +288,7 @@ export const countries = [
             name: 'Sunrise Gurney Homestay',
             image: require('../assets/images/malaysia/penang/sunrise_gurney_homestay.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.431626,
               longitude: 100.317848,
@@ -299,7 +299,7 @@ export const countries = [
             name: 'Evergreen Laurel Hotel Penang',
             image: require('../assets/images/malaysia/penang/evergreen_laurel_hotel_penang.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.431288,
               longitude: 100.317898,
@@ -334,7 +334,7 @@ export const countries = [
             name: 'Riverside Majestic Hotel',
             image: require('../assets/images/malaysia/kuching/riverside_majestic_hotel.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.557907,
               longitude: 110.352079,
@@ -345,7 +345,7 @@ export const countries = [
             name: 'Grand Margherita Hotel',
             image: require('../assets/images/malaysia/kuching/grand_margherita_hotel.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.558163,
               longitude: 110.352813,
@@ -356,7 +356,7 @@ export const countries = [
             name: 'Hilton Kuching',
             image: require('../assets/images/malaysia/kuching/hilton_kuching.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.557144,
               longitude: 110.350496,
@@ -383,7 +383,7 @@ export const countries = [
             name: 'Hilton Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/hilton_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.135308,
               longitude: 101.685729,
@@ -394,7 +394,7 @@ export const countries = [
             name: 'Le Méridien Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/le_meridien_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.135843,
               longitude: 101.686544,
@@ -405,7 +405,7 @@ export const countries = [
             name: 'The St. Regis Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/the_st_regis_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.136902,
               longitude: 101.688924,
@@ -432,7 +432,7 @@ export const countries = [
             name: 'Sunrise Gurney',
             image: require('../assets/images/malaysia/penang/sunrise_gurney.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.432874,
               longitude: 100.31675,
@@ -443,7 +443,7 @@ export const countries = [
             name: 'Sunrise Gurney Homestay',
             image: require('../assets/images/malaysia/penang/sunrise_gurney_homestay.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.431626,
               longitude: 100.317848,
@@ -454,7 +454,7 @@ export const countries = [
             name: 'Evergreen Laurel Hotel Penang',
             image: require('../assets/images/malaysia/penang/evergreen_laurel_hotel_penang.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.431288,
               longitude: 100.317898,
@@ -489,7 +489,7 @@ export const countries = [
             name: 'Riverside Majestic Hotel',
             image: require('../assets/images/malaysia/kuching/riverside_majestic_hotel.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.557907,
               longitude: 110.352079,
@@ -500,7 +500,7 @@ export const countries = [
             name: 'Grand Margherita Hotel',
             image: require('../assets/images/malaysia/kuching/grand_margherita_hotel.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.558163,
               longitude: 110.352813,
@@ -511,7 +511,7 @@ export const countries = [
             name: 'Hilton Kuching',
             image: require('../assets/images/malaysia/kuching/hilton_kuching.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 1.557144,
               longitude: 110.350496,
@@ -538,7 +538,7 @@ export const countries = [
             name: 'Hilton Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/hilton_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.135308,
               longitude: 101.685729,
@@ -549,7 +549,7 @@ export const countries = [
             name: 'Le Méridien Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/le_meridien_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.135843,
               longitude: 101.686544,
@@ -560,7 +560,7 @@ export const countries = [
             name: 'The St. Regis Kuala Lumpur',
             image: require('../assets/images/malaysia/kuala_lumpur/the_st_regis_kuala_lumpur.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 3.136902,
               longitude: 101.688924,
@@ -587,7 +587,7 @@ export const countries = [
             name: 'Sunrise Gurney',
             image: require('../assets/images/malaysia/penang/sunrise_gurney.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.432874,
               longitude: 100.31675,
@@ -598,7 +598,7 @@ export const countries = [
             name: 'Sunrise Gurney Homestay',
             image: require('../assets/images/malaysia/penang/sunrise_gurney_homestay.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.431626,
               longitude: 100.317848,
@@ -609,7 +609,7 @@ export const countries = [
             name: 'Evergreen Laurel Hotel Penang',
             image: require('../assets/images/malaysia/penang/evergreen_laurel_hotel_penang.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 5.431288,
               longitude: 100.317898,
@@ -644,7 +644,7 @@ export const countries = [
             name: 'Taj Holiday Village',
             image: require('../assets/images/india/goa/taj_holiday_village.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 15.499815,
               longitude: 73.769295,
@@ -655,7 +655,7 @@ export const countries = [
             name: 'Taj Fort Aguada',
             image: require('../assets/images/india/goa/taj_fort_aguada.jpeg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 15.497798,
               longitude: 73.767097,
@@ -682,7 +682,7 @@ export const countries = [
             name: 'Umaid Mahal',
             image: require('../assets/images/india/jaipur/umaid_mahal.webp'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 26.92794,
               longitude: 75.789056,
@@ -709,7 +709,7 @@ export const countries = [
             name: 'The Oberoi Amarvilas',
             image: require('../assets/images/india/agra/the_oberoi_amarvilas.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: 27.168123,
               longitude: 78.049032,
@@ -744,7 +744,7 @@ export const countries = [
             name: 'The Kayon Jungle Resort',
             image: require('../assets/images/indonesia/bali/the_kayon_jungle_resort.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: -8.422426,
               longitude: 115.275185,
@@ -755,7 +755,7 @@ export const countries = [
             name: 'Green View Private Villas',
             image: require('../assets/images/indonesia/bali/green_view_private_villas.webp'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: -8.422203,
               longitude: 115.275142,
@@ -782,7 +782,7 @@ export const countries = [
             name: 'Oakwood Premier Cozmo',
             image: require('../assets/images/indonesia/jakarta/oakwood_premier_cozmo.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: -6.227846,
               longitude: 106.825391,
@@ -793,7 +793,7 @@ export const countries = [
             name: 'JW Marriott Hotel',
             image: require('../assets/images/indonesia/jakarta/jw_marriott_hotel.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: -6.227036,
               longitude: 106.827333,
@@ -820,7 +820,7 @@ export const countries = [
             name: 'Purist Beach',
             image: require('../assets/images/indonesia/nusa_penida/purist_beach.jpg'),
             rate: 5,
-            price: 199,
+            price: 120000,
             latlng: {
               latitude: -8.703571,
               longitude: 115.439826,
