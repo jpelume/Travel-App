@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   secondaryText: {
-    color: 'black',
+    color: theme.COLORS.PRIMARY_TEXT,
     fontSize: theme.SIZES.H2,
     fontWeight: '500',
     textAlign: 'center',

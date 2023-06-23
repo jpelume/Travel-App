@@ -7,7 +7,7 @@ const MainStack = createStackNavigator();
 const MainNavigator = () => {
   return (
     <MainStack.Navigator
-      initialRouteName="HotelDetails"
+      initialRouteName="Home"
       screenOptions={{headerShown: false}}>
       <MainStack.Screen name="Home" component={HomeNavigator} />
       <MainStack.Screen name="Places" component={Places} />

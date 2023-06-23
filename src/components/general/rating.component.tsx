@@ -5,7 +5,7 @@ import {icons} from '../../utils';
 
 type Props = {
   rate: number;
-  containerStyle: any;
+  containerStyle?: any;
 };
 const Rating: React.FC<Props> = ({rate, containerStyle}) => {
   return (

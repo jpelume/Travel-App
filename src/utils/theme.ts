@@ -13,7 +13,7 @@ const theme = {
     GOOGLE: '#cf2c1f',
     WARNING: '#db9a02',
     ERROR: '#db0602',
-    SUCCESS: '#0b3812',
+    SUCCESS: '#1d8c01',
 
     white: '#fff',
     black: '#000000',

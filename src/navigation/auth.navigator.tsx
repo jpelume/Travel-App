@@ -6,7 +6,7 @@ const AuthStack = createStackNavigator();
 const AuthNavigator = () => {
   return (
     <AuthStack.Navigator
-      initialRouteName="UpdateProfile"
+      initialRouteName="Welcome"
       screenOptions={{headerShown: false}}>
       <AuthStack.Screen name="Welcome" component={Welcome} />
       <AuthStack.Screen name="Login" component={Login} />
