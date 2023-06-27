@@ -10,10 +10,10 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     padding: theme.SIZES.padding,
-    rowGap: 24,
+    rowGap: 32,
   },
   hotelImage: {
-    height: theme.SIZES.HEIGHT * 0.5,
+    height: theme.SIZES.HEIGHT * 0.55,
     borderBottomLeftRadius: 40,
     borderBottomRightRadius: 40,
     overflow: 'hidden',
@@ -76,6 +76,14 @@ const styles = StyleSheet.create({
     fontSize: theme.SIZES.h3,
     fontWeight: '500',
     color: theme.COLORS.PRIMARY_TEXT,
+  },
+  textStyle: {
+    paddingVertical: 15,
+    paddingHorizontal: 10,
+    borderColor: theme.COLORS.gray,
+    borderWidth: 1,
+    borderRadius: 10,
+    backgroundColor: theme.COLORS.white,
   },
 });
 

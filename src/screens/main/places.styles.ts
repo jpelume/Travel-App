@@ -89,6 +89,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: theme.SIZES.padding * 2,
   },
+  placeHeader: {
+    position: 'absolute',
+    top: theme.SIZES.padding,
+  },
   hotelDetailsContainer: {
     position: 'absolute',
     bottom: 30,

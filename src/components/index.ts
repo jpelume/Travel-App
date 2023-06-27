@@ -7,6 +7,13 @@ import {IconType, IconName} from './general/icons.component';
 import {InputType} from './general/customInput.component';
 import Header from './general/header.component';
 import Rating from './general/rating.component';
+import CustomDatePicker from './general/datePicker.component';
+import {
+  HotelReservationModal,
+  FlightReservationModal,
+  TransportReservationModal,
+  TranportType,
+} from './general/reservationModal.component';
 export {
   CustomButton,
   Icon,
@@ -15,9 +22,14 @@ export {
   SocialButton,
   Header,
   Rating,
+  CustomDatePicker,
+  HotelReservationModal,
+  FlightReservationModal,
+  TransportReservationModal,
   ButtonType,
   IconType,
   IconName,
   InputType,
   SocialButtonType,
+  TranportType,
 };

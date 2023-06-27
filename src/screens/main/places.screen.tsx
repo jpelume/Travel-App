@@ -5,6 +5,7 @@ import styles from './places.styles';
 import {
   ButtonType,
   CustomButton,
+  FlightReservationModal,
   Header,
   IconName,
   IconType,
@@ -38,10 +39,16 @@ const Places: React.FC<Props> = ({navigation, route}) => {
   const _draggedValue = useRef(new Animated.Value(0)).current;
   let _panelRef = useRef(null) as any;
 
+  const [showModal, setShowModal] = useState(false);
+  const unitPrice = 80000;
+
   useEffect(() => {
     _draggedValue.addListener(valueObj => {
       if (valueObj.value > theme.SIZES.HEIGHT) {
         setAllowDragging(false);
+      }
+      if (valueObj.value === 0) {
+        setAllowDragging(true);
       }
     });
     return () => {
@@ -52,7 +59,11 @@ const Places: React.FC<Props> = ({navigation, route}) => {
   const renderPlace = () => {
     return (
       <ImageBackground source={place?.image} style={styles.imageBackground}>
-        <Header title={''} leftOnPress={() => navigation.goBack()} />
+        <Header
+          title={''}
+          leftOnPress={() => navigation.goBack()}
+          containerStyle={styles.placeHeader}
+        />
         <View style={styles.placeDetailsContainer}>
           <View style={styles.nameAndRatingsContainer}>
             <Text style={styles.placeName}>{place?.name}</Text>
@@ -68,10 +79,15 @@ const Places: React.FC<Props> = ({navigation, route}) => {
               btnType={ButtonType.SECONDARY}
               icon={IconName.PLANE}
               iconType={IconType.FONT_AWESOME}
-              onPress={() => {}}
+              onPress={() => setShowModal(true)}
             />
           </View>
         </View>
+        <FlightReservationModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          unitPrice={unitPrice}
+        />
       </ImageBackground>
     );
   };

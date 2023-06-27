@@ -3,7 +3,14 @@ import {View, Text, ImageBackground} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import styles from './hotelDetails.style';
 import {dummyData, theme} from '../../utils';
-import {ButtonType, CustomButton, Header, Rating} from '../../components';
+import {
+  ButtonType,
+  CustomButton,
+  CustomDatePicker,
+  Header,
+  HotelReservationModal,
+  Rating,
+} from '../../components';
 import formatAmount from '../../utils/formatAmount';
 import CheckBox from 'react-native-check-box';
 
@@ -18,9 +25,11 @@ const HotelDetails: React.FC<Props> = ({navigation, route}) => {
   const discount = Math.round(Math.random() * 20);
   const reviews = Math.round(Math.random() * 200 + 100);
   const available = Math.round(Math.random());
-  const freeCancelation = Math.round(Math.random());
+  const freeCancelation = 1;
+  const [checkInDate, setCheckInDate] = useState(new Date());
+  const [checkOutDate, setCheckOutDate] = useState(new Date());
+  const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {}, []);
   return (
     <View style={styles.mainContainer}>
       <View style={styles.topContainer}>
@@ -49,7 +58,7 @@ const HotelDetails: React.FC<Props> = ({navigation, route}) => {
                     styles.dealText,
                     discount > 10
                       ? styles.greatText
-                      : discount > 10
+                      : discount > 5
                       ? styles.goodText
                       : styles.badText,
                   ]}>
@@ -88,7 +97,7 @@ const HotelDetails: React.FC<Props> = ({navigation, route}) => {
           <CustomButton
             btnType={ButtonType.SECONDARY}
             btnText={'Check availability'}
-            onPress={() => {}}
+            onPress={() => setShowModal(true)}
           />
           <View style={styles.row}>
             <Text style={styles.rateText}>Free cancelation</Text>
@@ -102,9 +111,33 @@ const HotelDetails: React.FC<Props> = ({navigation, route}) => {
         </View>
         <View style={styles.row}>
           <Text style={styles.rateText}>From</Text>
+          <CustomDatePicker
+            date={checkInDate}
+            setDate={setCheckInDate}
+            textStyle={styles.textStyle}
+          />
           <Text style={styles.rateText}>to</Text>
+          <CustomDatePicker
+            date={checkOutDate}
+            setDate={setCheckOutDate}
+            textStyle={styles.textStyle}
+            minDate={checkInDate}
+          />
         </View>
       </View>
+      <HotelReservationModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        startDate={checkInDate}
+        setStartDate={setCheckInDate}
+        endDate={checkOutDate}
+        setEndDate={setCheckOutDate}
+        hotel={{
+          name: hotel.name,
+          price: hotel.price - (hotel.price * discount) / 100,
+          freeCancelation: !!freeCancelation,
+        }}
+      />
     </View>
   );
 };

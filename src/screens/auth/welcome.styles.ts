@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
     padding: 10,
-    backgroundColor: theme.COLORS.PRIMARY + '90',
+    backgroundColor: theme.COLORS.LIGTH_DARK,
   },
   topContainer: {
     flex: 0.6,
