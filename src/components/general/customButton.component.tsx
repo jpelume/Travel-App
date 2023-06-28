@@ -35,7 +35,6 @@ const CustomButton: React.FC<Props> = ({
   loading = false,
   onPress = () => {},
 }) => {
-  const {width} = useWindowDimensions();
 
   return (
     <TouchableOpacity
@@ -45,9 +44,9 @@ const CustomButton: React.FC<Props> = ({
           : btnType === ButtonType.SECONDARY
           ? styles.secondaryWrapper
           : styles.textWrapper,
-        disabled && styles.disabled,
+        (disabled || loading) && styles.disabled,
       ]}
-      disabled={disabled}
+      disabled={disabled || loading}
       onPress={onPress}>
       <Text
         style={[

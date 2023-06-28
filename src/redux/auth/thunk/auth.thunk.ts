@@ -13,11 +13,11 @@ export const login = createAsyncThunk(
   },
 );
 
-export const singup = createAsyncThunk(
-  'auth/login',
+export const signup = createAsyncThunk(
+  'auth/signup',
   async (data: any, thunkAPI) => {
     try {
-      return new AuthServices().singnupService(data);
+      return new AuthServices().signupService(data);
     } catch ({error}: any) {
       return thunkAPI.rejectWithValue(handleErrorMessages(error));
     }
@@ -25,7 +25,7 @@ export const singup = createAsyncThunk(
 );
 
 export const updateProfile = createAsyncThunk(
-  'auth/login',
+  'auth/updateProfile',
   async (data: any, thunkAPI) => {
     try {
       return new AuthServices().updateProfileService(data);
