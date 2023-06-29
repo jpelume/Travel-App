@@ -1,7 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {login, signup, updateProfile} from '../thunk/auth.thunk';
 import storage from '../../../utils/storage';
-import {setFirestoreData} from '../../../utils/helpers/firebase';
 
 const initialState = {
   user: {},

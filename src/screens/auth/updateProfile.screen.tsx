@@ -1,4 +1,4 @@
-import {View, Text, SafeAreaView, ScrollView} from 'react-native';
+import {View, Text, SafeAreaView, ScrollView, Image} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import styles from './signup.styles';
 import {CustomButton, DropDown, Input} from '../../components';
@@ -8,6 +8,7 @@ import {RootState} from '../../redux/store';
 import {Toast} from 'react-native-toast-message/lib/src/Toast';
 import {UpdateProfileType} from '../../services/types/auth/AuthType';
 import {updateProfile} from '../../redux/auth/thunk/auth.thunk';
+import {icons} from '../../utils';
 
 type Props = {
   navigation: any;
@@ -37,7 +38,7 @@ const UpdateProfile: React.FC<Props> = ({navigation}) => {
     if (isUpdateSuccess) {
       Toast.show({
         type: 'success',
-        text1: 'Sign up successful!!',
+        text1: 'Profile updated!!',
       });
       navigation.navigate('Main');
     } else if (isUpdateError && updateMessage) {
@@ -70,7 +71,7 @@ const UpdateProfile: React.FC<Props> = ({navigation}) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.logoContainer}>
-        <Text style={styles.logo}>Logo</Text>
+        <Image source={icons.logo_tag_black} style={styles.logo} />
         <Text style={styles.title}>Travel app</Text>
       </View>
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>

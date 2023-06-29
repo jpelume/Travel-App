@@ -6,12 +6,14 @@ import {
   TouchableOpacity,
   Image,
   Animated,
+  Alert,
 } from 'react-native';
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styles from './home.style';
 import {dummyData, icons, images, theme} from '../../utils';
 import {ScrollView} from 'react-native';
 import {ButtonType, CustomButton} from '../../components';
+import {BackHandler} from 'react-native';
 
 type Props = {
   navigation: any;
@@ -34,6 +36,28 @@ const Home: React.FC<Props> = ({navigation}) => {
     ...dummyData.countries[0].places,
     {id: -2},
   ]) as any;
+
+  useEffect(() => {
+    const backAction = () => {
+      Alert.alert('Hold on!', 'Are you sure you want to exit?', [
+        {
+          text: 'Cancel',
+          onPress: () => null,
+          style: 'cancel',
+        },
+        {text: 'YES', onPress: () => BackHandler.exitApp()},
+      ]);
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      backAction,
+    );
+
+    return () => backHandler.remove();
+  }, []);
+
   function renderHeader() {
     return (
       <View style={styles.renderContainer}>

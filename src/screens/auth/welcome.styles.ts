@@ -5,23 +5,23 @@ const styles = StyleSheet.create({
   mainContainer: {
     justifyContent: 'center',
     flex: 1,
-    padding: 10,
+    padding: theme.SIZES.padding,
     backgroundColor: theme.COLORS.LIGTH_DARK,
   },
   topContainer: {
-    flex: 0.6,
+    flex: 0.5,
     alignItems: 'center',
     justifyContent: 'center',
     // backgroundColor: 'red',
   },
   bottomContainer: {
-    flex: 0.4,
+    flex: 0.5,
     // backgroundColor: 'yellow',
     justifyContent: 'space-evenly',
   },
   welcomeText: {
     color: 'white',
-    fontSize: 48,
+    fontSize: 56,
     fontWeight: '600',
   },
   appName: {

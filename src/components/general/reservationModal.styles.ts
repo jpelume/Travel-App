@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   departingContainer: {
     width: '50%',
     alignItems: 'center',
-    padding: 12,
+    padding: theme.SIZES.padding,
     borderRadius: theme.SIZES.radius,
   },
   activeOpacity: {

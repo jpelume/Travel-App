@@ -1,4 +1,3 @@
-import {AuthApis} from '../../api/AuthApis';
 import auth from '@react-native-firebase/auth';
 import {LoginType} from '../types/auth/AuthType';
 import {
@@ -13,13 +12,10 @@ export default class AuthServices {
       data.email,
       data.password,
     );
+    const userFound = await getFirestoreData('users', [], response?.user?.uid);
+
     return {
-      user: {
-        email: response?.user?.email,
-        name: response?.user?.displayName,
-        phoneNumer: response?.user?.phoneNumber,
-        photoURL: response?.user?.photoURL,
-      },
+      user: userFound?._data,
       userId: response?.user?.uid,
     };
   }
@@ -28,7 +24,7 @@ export default class AuthServices {
       data.email,
       data.password,
     );
-    await updateFirestoreData(
+    await setFirestoreData(
       'users',
       {
         email: response?.user?.email,
@@ -51,7 +47,9 @@ export default class AuthServices {
   public async updateProfileService(data: any) {
     await updateFirestoreData('users', data.data, data.id);
     const response = await getFirestoreData('users', [], data.id);
-    console.log('updated user: ', response);
-    return response;
+    return {
+      user: response?._data,
+      userId: response?.ref?.id,
+    };
   }
 }

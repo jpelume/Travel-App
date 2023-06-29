@@ -11,6 +11,9 @@ const side_drawer = require('../assets/icons/side_drawer.png');
 const star = require('../assets/icons/star.png');
 const up_arrow = require('../assets/icons/up_arrow.png');
 
+const logo_tag_white = require('../assets/images/logo_tag_white.png');
+const logo_tag_black = require('../assets/images/logo_tag_black.png');
+
 export default {
   aeroplane,
   bed_on,
@@ -24,4 +27,6 @@ export default {
   side_drawer,
   star,
   up_arrow,
+  logo_tag_black,
+  logo_tag_white,
 };

@@ -1,5 +1,5 @@
-import {View, Text, SafeAreaView} from 'react-native';
-import React, {useState} from 'react';
+import {View, Text, SafeAreaView, Image} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import styles from './signup.styles';
 import {
   ButtonType,
@@ -12,6 +12,12 @@ import {
   SocialButtonType,
 } from '../../components';
 import {isValidEmail} from './signup.screen';
+import {icons} from '../../utils';
+import {RootState} from '../../redux/store';
+import {useAppDispatch, useAppSelector} from '../../redux/typings';
+import {Toast} from 'react-native-toast-message/lib/src/Toast';
+import {LoginType} from '../../services/types/auth/AuthType';
+import {login} from '../../redux/auth/thunk/auth.thunk';
 
 type Props = {
   navigation: any;
@@ -21,11 +27,37 @@ const Login: React.FC<Props> = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const {isLoginSuccess, isLoginError, isLoginLoading, loginMessage} =
+    useAppSelector((state: RootState) => state.authSlice);
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    if (isLoginSuccess) {
+      Toast.show({
+        type: 'success',
+        text1: 'Login successful!!',
+      });
+      navigation.navigate('Main');
+    } else if (isLoginError && loginMessage) {
+      Toast.show({
+        type: 'error',
+        text1: loginMessage,
+      });
+    }
+  }, [isLoginError, isLoginSuccess, loginMessage, navigation]);
+
+  const handleLogin = () => {
+    const data: LoginType = {
+      email,
+      password,
+    };
+    dispatch(login(data));
+  };
+
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.logoContainer}>
-        <Text style={styles.logo}>Logo</Text>
-        <Text style={styles.title}>Travel app</Text>
+        <Image source={icons.logo_tag_black} style={styles.logo} />
+        <Text style={styles.title}>Fine Waka</Text>
       </View>
       <View style={styles.container}>
         <Input
@@ -53,7 +85,8 @@ const Login: React.FC<Props> = ({navigation}) => {
           <CustomButton
             btnText="Login"
             disabled={!(email && password)}
-            onPress={() => navigation.navigate('Main')}
+            loading={isLoginLoading}
+            onPress={handleLogin}
           />
           <View style={styles.spacing} />
           <SocialButton

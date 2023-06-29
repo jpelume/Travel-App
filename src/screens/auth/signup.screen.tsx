@@ -17,6 +17,8 @@ import {RootState} from '../../redux/store';
 import {LoginType} from '../../services/types/auth/AuthType';
 import {signup} from '../../redux/auth/thunk/auth.thunk';
 import {Toast} from 'react-native-toast-message/lib/src/Toast';
+import {icons} from '../../utils';
+import {Image} from 'react-native';
 
 type Props = {
   navigation: any;
@@ -32,7 +34,7 @@ const Signup: React.FC<Props> = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const {isSuccess, isError, isLoading, message, userId} = useAppSelector(
+  const {isSuccess, isError, isLoading, message} = useAppSelector(
     (state: RootState) => state.authSlice,
   );
   const dispatch = useAppDispatch();
@@ -51,12 +53,6 @@ const Signup: React.FC<Props> = ({navigation}) => {
     }
   }, [isSuccess, navigation, isError, message]);
 
-  useEffect(() => {
-    if (true) {
-      navigation.navigate('UpdateProfile');
-    }
-  }, [navigation, userId]);
-
   const handleRegister = () => {
     const data: LoginType = {
       email,
@@ -67,8 +63,8 @@ const Signup: React.FC<Props> = ({navigation}) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.logoContainer}>
-        <Text style={styles.logo}>Logo</Text>
-        <Text style={styles.title}>Travel app</Text>
+        <Image source={icons.logo_tag_black} style={styles.logo} />
+        <Text style={styles.title}>Fine Waka</Text>
       </View>
       <View style={styles.container}>
         <Input

@@ -29,9 +29,15 @@ export const getFirestoreData = async (
   }
 };
 
-export const setFirestoreData = async (collection: string, data: any) => {
+export const setFirestoreData = async (
+  collection: string,
+  data: any,
+  id?: string,
+) => {
   try {
-    return await firestore().collection(collection).add(data);
+    return id
+      ? await firestore().collection(collection).doc(id).set(data)
+      : await firestore().collection(collection).add(data);
   } catch (error) {
     console.log('Error setting data: ', error);
   }

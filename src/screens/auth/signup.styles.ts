@@ -5,11 +5,10 @@ const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
     backgroundColor: 'white',
-    padding: 10,
+    padding: theme.SIZES.padding,
   },
   logoContainer: {
-    height: 160,
-    // backgroundColor: 'red',
+    rowGap: 64,
   },
   logo: {
     width: 80,
