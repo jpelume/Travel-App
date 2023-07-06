@@ -14,6 +14,8 @@ import {
   TransportReservationModal,
   TranportType,
 } from './general/reservationModal.component';
+import NavOptions from './general/navOptions.component';
+import Map from './general/map.component';
 export {
   CustomButton,
   Icon,
@@ -26,6 +28,8 @@ export {
   HotelReservationModal,
   FlightReservationModal,
   TransportReservationModal,
+  NavOptions,
+  Map,
   ButtonType,
   IconType,
   IconName,

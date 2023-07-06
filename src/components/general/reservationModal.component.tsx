@@ -255,7 +255,8 @@ const FlightReservationModal: React.FC<FlightProps> = ({
 type TransportProps = {
   type: TranportType;
   showModal: boolean;
-  setShowModal: boolean;
+  setShowModal: any;
+  unitPrice: number;
 };
 
 export enum TranportType {
@@ -264,11 +265,86 @@ export enum TranportType {
   CAB = 'cab',
 }
 
-const TransportReservationModal: React.FC<TransportProps> = () => {
+const TransportReservationModal: React.FC<TransportProps> = ({
+  type,
+  showModal,
+  setShowModal,
+  unitPrice = 500,
+}) => {
+  const [numberOfUsers, setNumberOfUsers] = useState(1);
+  const [totalPayable, setTotalPayable] = useState(
+    unitPrice * numberOfUsers * 1,
+  );
+  const [travelTime, setTravelTime] = useState(new Date());
+
+  useEffect(() => {
+    setTotalPayable(unitPrice * numberOfUsers * 1);
+  }, [unitPrice, numberOfUsers]);
   return (
-    <View>
-      <Text>ReservationModal</Text>
-    </View>
+    <Modal animationType={'slide'} visible={showModal} transparent>
+      <View style={styles.modalContainer}>
+        <View style={styles.mainContainer}>
+          <TouchableOpacity
+            style={styles.closeButton}
+            onPress={() => setShowModal(false)}>
+            <Icon
+              iconName={IconName.CLOSE}
+              iconType={IconType.ANT_DESIGN}
+              size={24}
+              color={theme.COLORS.black}
+            />
+          </TouchableOpacity>
+          <View style={styles.contentContainer}>
+            <Text style={styles.heading}>Book a {type}</Text>
+            <View style={[styles.row, styles.justifyBetween]}>
+              <View style={styles.row}>
+                <Text>{''}</Text>
+              </View>
+              <Icon
+                iconName={IconName.USER}
+                iconType={IconType.FEATHER}
+                color={theme.COLORS.PRIMARY_TEXT}
+                size={24}
+              />
+            </View>
+            <View style={[styles.row, styles.justifyBetween]}>
+              <Text style={styles.text}>At</Text>
+              <CustomDatePicker
+                date={travelTime}
+                setDate={setTravelTime}
+                textStyle={styles.textStyle}
+              />
+              <NumericInput
+                type="up-down"
+                value={numberOfUsers}
+                onChange={value => {
+                  setNumberOfUsers(value);
+                }}
+                totalHeight={50}
+                totalWidth={60}
+                containerStyle={{
+                  borderRadius: theme.SIZES.radius,
+                }}
+              />
+            </View>
+            <View style={[styles.row, styles.justifyBetween]}>
+              <Text style={styles.text}>
+                Total Payable:{' '}
+                <Text style={styles.bold}>
+                  {formatAmount({amount: totalPayable})}
+                </Text>
+              </Text>
+              <CustomButton
+                btnText="Book"
+                onPress={() => {
+                  setShowModal(false);
+                }}
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
   );
 };
 

@@ -832,6 +832,29 @@ export const countries = [
   },
 ];
 
+export const navOptions = [
+  {
+    id: '1',
+    type: 'cab',
+    image: require('../assets/images/UberX.jpeg'),
+  },
+  {
+    id: '2',
+    type: 'bus',
+    image: require('../assets/images/bus.jpeg'),
+  },
+  {
+    id: '3',
+    type: 'train',
+    image: require('../assets/images/train.jpeg'),
+  },
+  {
+    id: '4',
+    type: 'flight',
+    image: require('../assets/images/flight.jpeg'),
+  },
+];
+
 const dummyData = {countries};
 
 export default dummyData;

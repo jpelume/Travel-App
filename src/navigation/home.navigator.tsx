@@ -1,5 +1,5 @@
 import React from 'react';
-import {Home} from '../screens';
+import {Home, Resources} from '../screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Icon, IconName, IconType} from '../components';
 import theme from '../utils/theme';
@@ -8,7 +8,7 @@ const HomeTab = createBottomTabNavigator();
 const HomeNavigator = () => {
   return (
     <HomeTab.Navigator
-      initialRouteName="Dashboard"
+      initialRouteName="Resources"
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
@@ -67,7 +67,7 @@ const HomeNavigator = () => {
       />
       <HomeTab.Screen
         name="Resources"
-        component={Home}
+        component={Resources}
         options={{
           tabBarIcon: ({focused}) => (
             <Icon
