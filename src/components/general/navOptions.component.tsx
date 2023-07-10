@@ -12,7 +12,7 @@ const NavOptions: React.FC<Props> = () => {
   const [transport, setTransport] = useState() as any;
   const [showModal, setShowModal] = useState(false);
   return (
-    <>
+    <View>
       <FlatList
         data={navOptions}
         keyExtractor={item => item.id}
@@ -53,7 +53,7 @@ const NavOptions: React.FC<Props> = () => {
           unitPrice={60000}
         />
       )}
-    </>
+    </View>
   );
 };
 

@@ -1,7 +1,7 @@
 import authSlice from './auth/slices/auth.slice';
-import navSlices from './navigation/slices/nav.slices';
+import navSlice from './navigation/slices/nav.slice';
 
 export default {
   authSlice,
-  navSlices,
+  navSlice,
 };
